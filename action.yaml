@@ -1,0 +1,33 @@
+name: "SFTP Deployment Action"
+description: "Deploy a folder with files on a SFTP Server"
+author: "Kopper (Alexander M.)"
+inputs:
+  host:
+    description: "SFTP Server Address (e.g. ssh.server.com)"
+    required: true
+    default: "localhost"
+  port:
+    description: "Server Port"
+    required: false
+    default: "22"
+  username:
+    description: "SFTP Username"
+    required: true
+    default: "root"
+  password:
+    description: "SFTP Password (for user)"
+    required: true
+    default: "password"
+  localPath:
+    description: "Folder with the Content to upload"
+    required: true
+  remotePath:
+    description: "Folder on the Webserver to upload the files to"
+    required: true
+  cleanBefore:
+    description: Delete the Contents of the remote folder before uploading
+    required: false
+    default: false
+runs:
+  using: "node12"
+  main: "dist/index.js"

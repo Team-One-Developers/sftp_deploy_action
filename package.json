@@ -1,0 +1,15 @@
+{
+  "name": "sftp_deploy_action",
+  "version": "0.0.2",
+  "description": "SFTP Deployment Action via Basic Auth",
+  "main": "index.js",
+  "repository": "https://github.com/Team-One-Developers/sftp_deploy_action.git",
+  "author": "k0pper <mial1016@hs-karlsruhe.de>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.1",
+    "ssh2-sftp-client": "^8.0.0"
+  }
+}
